@@ -1,3 +1,3 @@
 # Haikus for June
 
-Readme updates in progress
+Readme updates in progress!
