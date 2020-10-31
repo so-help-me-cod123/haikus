@@ -19,7 +19,6 @@ services:
     
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
-    network_mode: host
 
   db:
     image: postgres
@@ -27,5 +26,4 @@ services:
     env_file: ../.env
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    network_mode: host
 
