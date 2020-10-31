@@ -1,6 +1,8 @@
 version: '3'
 services:
   web:    
+    network_mode: host
+
     build: 
       context: .
       dockerfile: Dockerfile
@@ -20,13 +22,12 @@ services:
     # Overrides default command so things don't shut down after the process ends.
     command: sleep infinity
 
+  db:
     network_mode: host
 
-  db:
     image: postgres
     restart: unless-stopped
     env_file: ../.env
     volumes:
       - ./init.sql:/docker-entrypoint-initdb.d/init.sql
 
-    network_mode: host
