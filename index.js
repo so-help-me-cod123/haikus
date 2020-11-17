@@ -18,6 +18,8 @@ app.use(express.urlencoded({extended: true}));
 app.use(express.static('public'))
 app.set('view engine', 'ejs');
 
+console.log('hi');
+
 app.get('/', (req, res) => {
   pool.query('SELECT * FROM haikus ORDER BY id', (err, haikus) => {
     res.render('index', {haikus: haikus.rows});
