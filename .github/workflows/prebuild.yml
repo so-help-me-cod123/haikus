@@ -10,7 +10,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v2
-      - uses: github/codespaces-precache@updates-for-logging
+      - uses: github/codespaces-precache@v1.0.1
         with:
           regions: WestUs2
           sku_name: standardLinux32gb
