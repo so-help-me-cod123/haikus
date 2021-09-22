@@ -12,7 +12,7 @@ jobs:
       - uses: actions/checkout@v2
       - uses: github/codespaces-precache@updates-for-logging
         with:
-          regions: EastUs
+          regions: WestUs2
           sku_name: standardLinux32gb
           target: ppe 
         env:
