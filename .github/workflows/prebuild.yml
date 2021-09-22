@@ -14,5 +14,6 @@ jobs:
         with:
           regions: EastUs
           sku_name: standardLinux32gb
+          target: ppe 
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
